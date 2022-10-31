@@ -38,13 +38,13 @@ const axios: Plugin = ({
     const currentRoute = app.router?.currentRoute.path
 
     if (
-      currentRoute !== Constants.routePage.ADMWeb001 &&
+      currentRoute !== Constants.routePage.HOME &&
       response?.status === Constants.common.STATUS_CODE.UNAUTHORIZED
     ) {
       store.dispatch('auth/logout')
 
       redirect({
-        path: Constants.routePage.ADMWeb001,
+        path: Constants.routePage.HOME,
         query: { redirect: `${currentRoute}` },
       })
     }

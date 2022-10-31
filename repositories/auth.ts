@@ -2,19 +2,13 @@ import { $axios, ApiResponse } from '@/utils/axios'
 import {
   LoginEntity,
   LogoutEntity,
-  UserEntity,
-  ResetPasswordEntity,
-  ForgotPasswordEntity,
-  ValidateTokenEntity,
+  UserEntity
 } from '@/entities/auth'
 import RouteApi from '@/constants/route-api'
 import {
   ILogin,
-  ILogout,
-  IForgotPassword,
-  IResetPassword,
-  IValidateToken,
-} from '~/models/auth'
+  ILogout
+} from '@/models/auth'
 
 const me = () =>
   $axios.get(RouteApi.AUTH.ME) as Promise<ApiResponse<UserEntity>>
