@@ -19,6 +19,39 @@ $ yarn generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## Folder Structure
+
+.
+├── dist                    # compiled files
+├── docs                    # documentation files
+├── src                     # source files
+│   ├── apis                  # http requests
+│   ├── assets                # un-compiled files
+│   │   ├── fonts               # ...
+│   │   ├── images              # ...
+│   │   └── styles              # ...
+│   ├── components            # component for page
+│   │   ├── common              # ...
+│   │   └── pages               # ...
+│   ├── constants             # constants common
+│   ├── entities              # interface for response http request
+│   ├── factory               # mock http request
+│   ├── layouts               # the layout for app
+│   ├── locales               # multi language
+│   ├── mapper                # convert entity to model or model to entity
+│   ├── middleware            # guard
+│   ├── mixins                # component extend
+│   ├── models                # interface for client
+│   ├── pages                 # index page and router for nuxt
+│   ├── plugins               # vue plugin
+│   ├── static                # files that likely won't be changed
+│   ├── store                 # state management
+│   ├── types                 # declare types for app
+│   └── utils                 # utilities
+├── tests                   # unit tests
+├── package.json            # ...
+└── README.md               # ...
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.

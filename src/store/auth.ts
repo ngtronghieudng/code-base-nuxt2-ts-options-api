@@ -1,6 +1,6 @@
 import { ActionTree, GetterTree, MutationTree } from 'vuex'
 import { UserEntity } from '@/entities/auth'
-import CONSTANTS from '@/constants'
+import constants from '@/constants'
 
 interface StateProps {
   user: UserEntity | null
@@ -41,18 +41,18 @@ export const actions: ActionTree<RootState, RootState> = {
       commit('SET_USER', response)
       commit(
         'SET_ACCESS_TOKEN',
-        this.$cookies.get(CONSTANTS.common.ACCESS_TOKEN_KEY)
+        this.$cookies.get(constants.common.ACCESS_TOKEN_KEY)
       )
       commit(
         'SET_REFRESH_TOKEN',
-        this.$cookies.get(CONSTANTS.common.REFRESH_TOKEN_KEY)
+        this.$cookies.get(constants.common.REFRESH_TOKEN_KEY)
       )
     }
   },
   logout({ commit }) {
     commit('LOGOUT')
-    this.$cookies.remove(CONSTANTS.common.ACCESS_TOKEN_KEY)
-    this.$cookies.remove(CONSTANTS.common.REFRESH_TOKEN_KEY)
+    this.$cookies.remove(constants.common.ACCESS_TOKEN_KEY)
+    this.$cookies.remove(constants.common.REFRESH_TOKEN_KEY)
   },
 }
 
