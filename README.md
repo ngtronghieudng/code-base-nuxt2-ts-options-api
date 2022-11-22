@@ -21,9 +21,10 @@ For detailed explanation on how things work, check out the [documentation](https
 
 ## Folder Structure
 
+```
 .
-├── dist                    # compiled files
 ├── docs                    # documentation files
+├── libs                    # third party
 ├── src                     # source files
 │   ├── apis                  # http requests
 │   ├── assets                # un-compiled files
@@ -51,6 +52,7 @@ For detailed explanation on how things work, check out the [documentation](https
 ├── tests                   # unit tests
 ├── package.json            # ...
 └── README.md               # ...
+```
 
 ## Special Directories
 
